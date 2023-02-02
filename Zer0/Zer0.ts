@@ -5,11 +5,13 @@ function endZeros(a:number): number {
     let splitted = numStr.split("");
 
     let count: number = 0;
-    for (let index = 0; index < splitted.length; index++) {
-        if (splitted[index] == "0") {
+    let arrayLength: number = splitted.length;
+
+        while (splitted[arrayLength-1] == "0") {
+            arrayLength--;
             count += 1;
-        }   
-    }
+        } 
+
     return count;
 }
 

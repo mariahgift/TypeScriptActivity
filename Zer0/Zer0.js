@@ -8,10 +8,10 @@ function endZeros(a) {
     let numStr = a.toString();
     let splitted = numStr.split("");
     let count = 0;
-    for (let index = 0; index < splitted.length; index++) {
-        if (splitted[index] == "0") {
-            count += 1;
-        }
+    let arrayLength = splitted.length;
+    while (splitted[arrayLength - 1] == "0") {
+        arrayLength--;
+        count += 1;
     }
     return count;
 }
