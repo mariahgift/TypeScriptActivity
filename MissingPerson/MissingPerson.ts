@@ -43,13 +43,7 @@ export const persons: Person[] /* <- Person[] */ = [
 ];
 
 export function logPerson(person: Person) {
-    let additionalInformation: string;
-    if('role' in person) {
-        additionalInformation = person.role;
-    } else {
-        additionalInformation = person.occupation;
-    }
-    console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
+    console.log(` - ${person.name}, ${person.age}`);
 }
 
 persons.forEach(logPerson);
